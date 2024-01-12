@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Shimmer;assembly=Syncfusion.Maui.Core"
+             xmlns:local="clr-namespace:LabTest"
+             x:Class="LabTest.MainPage">
+
+    <ContentPage.Resources>
+        <local:ValueToColorConverter x:Key="ValueToColorConverter"/>
+        <local:ValueToTextConverter x:Key="ValueToTextConverter"/>
+    </ContentPage.Resources>
+    
+    <StackLayout>
+        <Grid VerticalOptions="CenterAndExpand"
+              RowDefinitions="*" ColumnDefinitions="auto, *"
+              Margin="20">
+            <Label x:Name="label1" Grid.Row="0" 
+                   Grid.Column="0"
+                   HorizontalOptions="CenterAndExpand"
+                   Text="{Binding Source={x:Reference slider1}, Path=Value}"/>
+            
+            <Slider x:Name="slider1"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    Maximum="100"
+                    ThumbColor="{Binding Source={x:Reference slider1}, Path=Value, Converter={StaticResource ValueToColorConverter}}"
+                    
+                    MinimumTrackColor="Red"/>
+            
+            <Label x:Name="label2"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="{Binding Source={x:Reference slider1}, Path=Value, Converter={StaticResource ValueToColorConverter}}"
+                   Text="{Binding Source={x:Reference slider1}, Path=Value, Converter={StaticResource ValueToTextConverter}}"/>
+
+        </Grid>
+    </StackLayout>
+
+    
+
+</ContentPage>
