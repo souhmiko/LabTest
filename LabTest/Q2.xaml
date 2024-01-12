@@ -29,5 +29,9 @@
         <Button x:Name="RegisterButton" Text="Register" FontSize="Medium" CornerRadius="20"
         VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" IsEnabled="False" Clicked="OnRegisterButtonClicked"/>
 
+        <Button Text="Go to Q3" Clicked="OnGoToQ3Clicked" Margin="50,50,50,10"/>
+
     </StackLayout>
+
+    
 </ContentPage>

@@ -36,6 +36,8 @@
                    Text="{Binding Source={x:Reference slider1}, Path=Value, Converter={StaticResource ValueToTextConverter}}"/>
 
         </Grid>
+
+        <Button Text="Go to Q2" Clicked="OnGoToQ2Clicked"/>
     </StackLayout>
 
     

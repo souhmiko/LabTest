@@ -42,4 +42,10 @@ public partial class Q2 : ContentPage
         // Handle Register button click
         // Add your registration logic?here
     }
+
+    private async void OnGoToQ3Clicked(object sender, EventArgs e)
+    {
+        // Navigate to Q3 page
+        await Shell.Current.GoToAsync("//Q3");
+    }
 }

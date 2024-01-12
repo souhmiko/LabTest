@@ -8,10 +8,12 @@
     Title="LabTest">
 
     <ShellContent
-        Title="Q2"
+        Title="Q1"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
-    
+    <ShellContent Title="Q2" ContentTemplate="{DataTemplate local:Q2}" Route="Q2" />
+
+    <ShellContent Title="Q3" ContentTemplate="{DataTemplate local:Q3}" Route="Q3" />
 
 </Shell>
